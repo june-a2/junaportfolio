@@ -1,0 +1,188 @@
+*,
+*::before,
+*::after {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input,
+textarea,
+select,
+[contenteditable="true"] {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+.main-window {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;  
+  width: 36.875rem;
+  height: 35.8125rem;
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFF9F0;
+  border-radius: 0.75rem;
+  border: 0.125rem solid #AC8C70;
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  z-index: 1000;
+}
+
+.topbar {
+  position: absolute;
+  top: -0.125rem;
+  left: -0.125rem;
+  width: calc(100% + 0.25rem);
+  height: 3rem;
+  background-color: #AC8C70;
+  border-top-left-radius: 0.45rem;
+  border-top-right-radius: 0.45rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  box-sizing: border-box;
+  z-index: 10;
+  box-shadow: 0 0.125rem 0 0 #94775d;
+}
+
+.topbar span {
+  font-family: 'Zain', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #F1E8D9;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main-window h1 {
+  color: #474747;
+  font-family: 'Zain', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 200;
+  margin: 0;
+}
+
+h1 span {
+  color: #ca877c;
+  font-weight: 700;
+  font-family: 'Zain', sans-serif;
+}
+
+.main-window h2 {
+  color: #474747;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  margin: 0;
+}
+
+.main-window .button-group {
+  margin-top: 3rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main-window .icon-button {
+  width: 3rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.main-window .icon-button:hover {
+  transform: scale(1.15);
+}
+
+.main-window .icon-button img {
+  width: 2.8rem;
+  height: 3rem;
+}
+
+.main-window .icon-label {
+  margin-top: 0.25rem;
+  font-family: 'Zain', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+  color: #333;
+}
+
+.main-window .avatar {
+  margin: 1rem 0;
+}
+
+.main-window .avatar svg {
+  width: 9.3rem;
+  height: 9.3rem;
+  fill: #AC8C70;
+}
+
+.main-window .avatar img {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+}
+
+@media (max-width: 580px) {
+  .main-window {
+    width: 90%;
+    height: auto;
+    padding: 1rem;
+    border: none;
+    border-radius: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  .topbar {
+    display: none;
+  }
+
+  .main-window .avatar img {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .main-window h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .main-window h2 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .main-window .button-group {
+    gap: 1.5rem;
+  }
+
+  .main-window .icon-button img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .main-window .icon-label {
+    font-size: 0.9rem;
+  }
+}
+
+
